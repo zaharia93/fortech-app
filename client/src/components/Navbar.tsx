@@ -1,34 +1,29 @@
-import React from "react"
-import { NavLink, useNavigate } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom";
 export const Navbar = () => {
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/")
-  }
+    navigate("/");
+  };
 
   return (
     <>
-      <div className='navbar bg-base-300'>
-        <div className='flex-1'>
+      <div className="navbar  bg-stone-900">
+        <div className="flex-1">
           <button
             onClick={handleClick}
-            className='btn btn-ghost normal-case text-xl'
+            className="btn btn-ghost normal-case text-3xl text-lime-500 "
           >
             Watchlist
           </button>
         </div>
-        <div className='flex-none'>
-
-       
-
-          <ul className='menu menu-horizontal p-0'>
+        <div className="flex-none">
+          <ul className="menu menu-horizontal p-0  text-lime-500">
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "bg-base-100 text-red-700" : ""
+                  isActive ? "bg-zinc-700 text-lime-300" : ""
                 }
-                to='/'
+                to="/"
               >
                 Home
               </NavLink>
@@ -36,9 +31,9 @@ export const Navbar = () => {
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "bg-base-100 text-red-700" : ""
+                  isActive ? "bg-zinc-700 text-lime-300" : ""
                 }
-                to='/movies'
+                to="/movies"
               >
                 Movie List
               </NavLink>
@@ -46,18 +41,16 @@ export const Navbar = () => {
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "bg-base-100 text-red-700" : ""
+                  isActive ? "bg-zinc-700 text-lime-300" : ""
                 }
-                to='/about'
+                to="/about"
               >
                 About
               </NavLink>
             </li>
-            
           </ul>
         </div>
       </div>
     </>
-  )
-}
-
+  );
+};

@@ -1,8 +1,6 @@
 import { useState } from "react"
 import { postMovie } from "../services/movieService"
 import { ICreateMovieReq } from "../types/createMovieReq"
-import { IMovie } from "../types/movie"
-
 
 export const useCreateMovie = () => {
   const [isLoading, setIsLoading] = useState(true)

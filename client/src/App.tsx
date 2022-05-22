@@ -1,10 +1,10 @@
-import React from 'react';
+
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { Home } from "./pages/Home/Home";
-import { CreateMovie } from "./pages/Movies/AddMovie"
+import { CreateMovie } from "./pages/Movies/AddMovie/AddMovie"
 import { Movies } from './pages/Movies/Movies';
 import { About } from "./pages/About/About"
-import { DetailMovie } from './pages/Movies/DetailMovie';
+import { DetailMovie } from './pages/Movies/DetailMovie/DetailMovie';
 
 
 

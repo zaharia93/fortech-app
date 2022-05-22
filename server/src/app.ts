@@ -4,7 +4,7 @@ const router = require("./routes/movie-routes");
 const cors = require("cors");
 const app = express();
 
-// Middlewares
+
 app.use(express.json());
 app.use(cors());
 app.use("/movies", router); // localhost:5000/movies

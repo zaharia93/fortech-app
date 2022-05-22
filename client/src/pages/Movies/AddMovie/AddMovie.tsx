@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Layout } from "../../components/Layout/layout";
-import { useCreateMovie } from "../../hooks/useCreateMovie";
-import { IProp } from "../../types/externMovies";
-import {  MovieResultCard } from "./MovieCard/MovieResultCard";
+import { Layout } from "../../../components/Layout/layout";
+import { useCreateMovie } from "../../../hooks/useCreateMovie";
+import { IProp } from "../../../types/externMovies";
+import {  MovieResultCard } from "../MovieCard/MovieResultCard";
 
 
 export const CreateMovie= () => {
@@ -31,23 +31,26 @@ const onChange = (e: {
 
   return (
     <Layout>
-    <div className="form-control ">
+      <div className=" min-h-screen bg-gradient-to-l from-zinc-800 to-lime-500  ">
+    <div className="form-control lg:mx-10 sm:my-5">
         <input
-          className="input input-bordered m-20"
+          className="input input-bordered m-20  bg-gradient-to-r from-stone-200 to-stone-50 text-lime-800  text-2xl"
           placeholder="Search for a movie"
           onChange={onChange}
           value={query}
           type="text"
         />
-        <div >
+        <div className="  grid lg:grid-cols-2  sm:grid-cols-none  "
+           >
           {results?.map(movie => (
             <div
-         
+            className=" w-full "
                key={`${movie._id}`}>
               <MovieResultCard {...movie} />
             </div>
           ))}
         </div>
+      </div>
       </div>
     </Layout>
   )
